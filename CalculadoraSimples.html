@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Calculadora com PROMPT</title>
+        <style>
+            h1{
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                
+                font-size: 90px;
+            }
+
+            a{
+                color: white;
+            }
+            body{
+                background-image: linear-gradient(red, purple);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            <a target="_blank" href="https://www.instagram.com/yf.developer/">Segue no Instagram!!</a>
+
+        </h1>
+        <script>
+
+            //Aplicação calculadora dinâmica
+            //Queremos um número inicial
+            //Queremos sinal(tipo de operação)
+            //Queremos um número final
+
+
+            //Implementar verificação para saber se é um número
+            
+            var numero1 = prompt('Informe o primeiro número!');
+
+            while(numero1 == ''){
+                alert("Informe um número!");
+                numero1 = prompt('Informe o primeiro número!');
+            }
+
+            var sinal = prompt('Informe o tipo de operação');
+
+                while(sinal != "-" && sinal != "+" && sinal != "/" && sinal != "*"){
+                    alert("Informe um sinal valido! {'+',-','/','*'}");
+                        sinal = prompt('Informe o tipo de operação');
+                }
+                        
+                    
+               
+            var numeroFinal = prompt('Informe o número final!');
+            while(numeroFinal == ''){
+                alert("Informe um número!");
+                numero1 = prompt('Informe o primeiro número!');
+            }
+
+            //Funções para converter  para número uma string...//
+
+                    numero1 = parseInt(numero1);
+                    numeroFinal = parseInt(numeroFinal);
+
+            var resultadoFinal = 0
+
+            if(sinal == '+'){
+                resultadoFinal = numero1 + numeroFinal;
+            }else if(sinal == '-'){
+                resultadoFinal = numero1 - numeroFinal;
+            }else if (sinal == '/'){
+                resultadoFinal = numero1 / numeroFinal;
+            }else if (sinal == '*'){
+                resultadoFinal = numero1 * numeroFinal;
+            }        
+            alert('O resultado é '+ resultadoFinal);
+
+        </script>
+
+    </body>
+</html>
